@@ -2,6 +2,8 @@
 
 Site statique du festival (5–6 septembre 2026, Bretagne). Une page en français : infos lieu/accès/esprit/bouffe + formulaire RSVP minimaliste.
 
+**Live** : https://zingy-eclair-56adf4.netlify.app — deploy auto à chaque push sur `master`. Réponses au formulaire : dashboard Netlify → Forms → `rsvp`.
+
 ## Stack
 
 - HTML/CSS/JS vanilla, aucune dépendance, aucun build.
