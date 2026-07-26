@@ -207,13 +207,97 @@ h1, h2, .hero-kicker, .hero-theme, .card h3 {
   justify-content: center;
   text-align: center;
 }
+.photo { position: relative; }
 .photo img { width: 100%; height: 100%; object-fit: cover; }
+.photo figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.6rem 0.8rem 0.5rem;
+  background: linear-gradient(transparent, rgba(20, 28, 21, 0.72));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-align: left;
+}
 .photo.placeholder {
   background: repeating-linear-gradient(45deg, var(--card), var(--card) 12px, var(--bg) 12px, var(--bg) 24px);
   border: 3px dashed var(--accent);
   font-weight: 700;
 }
 .photo.placeholder small { opacity: 0.6; font-weight: 400; }
+
+/* ---------------- carte (umap) ---------------- */
+
+.map-wrap { margin-top: 1.5rem; }
+.map-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 340px;
+  border: none;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.map-wrap .note { margin-top: 0.8rem; }
+
+/* ---------------- participation / prix ---------------- */
+
+.tiers .tier-price {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--accent-warm);
+  margin: 0.2rem 0 0.4rem;
+}
+
+.pay-box {
+  margin-top: 2rem;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.pay-box h3 {
+  font-family: "Caveat", cursive;
+  font-size: 1.9rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.pay-box ol.steps { counter-reset: step; }
+.pay-box ol.steps li { background: var(--bg); display: flex; gap: 0.7rem; align-items: baseline; }
+.pay-box ol.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  flex: none;
+  font-weight: 900;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 50%;
+  width: 1.6rem; height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0.2rem);
+}
+
+.pay-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+.pay-qr { flex: none; }
+.pay-qr img { width: 180px; border-radius: 12px; display: block; }
+.pay-qr figcaption { text-align: center; font-size: 0.9rem; margin-top: 0.3rem; }
+.pay-alt { flex: 1; min-width: 240px; }
+.pay-alt p { margin-bottom: 0.6rem; }
+.pay-alt code {
+  background: var(--bg-alt);
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.95em;
+  word-break: break-all;
+}
+.pay-alt .note { margin-top: 1rem; }
 
 /* ---------------- listes ---------------- */
 
@@ -240,6 +324,7 @@ h1, h2, .hero-kicker, .hero-theme, .card h3 {
 
 .rsvp input[type="text"],
 .rsvp input[type="number"],
+.rsvp input[type="tel"],
 .rsvp textarea,
 .rsvp select {
   font: inherit;
@@ -261,6 +346,9 @@ h1, h2, .hero-kicker, .hero-theme, .card h3 {
 .rsvp legend { font-weight: 700; margin-bottom: 0.5rem; }
 
 .radio-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.radio-col { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-start; }
+
+.field-hint { font-weight: 400; font-size: 0.92rem; opacity: 0.85; }
 
 .pill {
   flex-direction: row !important;

@@ -28,8 +28,26 @@ netlify deploy --prod
 
 Ou : connecter le repo GitHub dans le dashboard Netlify (deploy auto à chaque push).
 
+## Récupérer les réponses (pour l'équipe orga)
+
+Trois options, de la plus simple à la plus scriptable :
+
+1. **Dashboard Netlify** → site `zingy-eclair-56adf4` → *Forms* → `rsvp` → bouton **Export CSV**. C'est la source de vérité (inclut qui a choisi quel palier → à croiser avec les virements reçus pour les relances).
+2. **Inviter Lucas** comme collaborateur : dashboard Netlify → *Team* → *Members* → invite par email (gratuit en rôle Collaborator). Il voit les réponses sans passer par Corentin.
+3. **CLI** (export scriptable) :
+   ```bash
+   netlify api listFormSubmissions --data '{"form_id": "<id>"}' | jq -r \
+     '.[].data | [.nom, .telephone, .venue, .participation, .arrivee, .allergies] | @csv'
+   # <id> : netlify api listForms --data '{"site_id": "<site-id>"}'
+   ```
+
+Suivi paiements : croiser l'export CSV (colonne `participation`) avec les virements Revolut/banque (message du virement = prénom + nom).
+
+## QR code du site
+
+`assets/qr-site.png` pointe vers l'URL live — à coller dans WhatsApp / imprimer pour partager le site.
+
 ## TODO
 
-- [ ] Remplacer les placeholders photos (`.photo.placeholder` dans `index.html`) par les vraies photos (piscine, forêt, maison, orgas)
+- [ ] Photo des orgas (dernier placeholder de la grille)
 - [ ] Ajouter la liste des invité·es quand les réponses arrivent
-- [ ] Prix indicatif une fois les coûts estimés

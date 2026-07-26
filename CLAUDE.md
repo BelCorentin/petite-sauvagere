@@ -30,7 +30,8 @@ Compress first (`≤300KB`, e.g. `convert in.jpg -resize 1600x -quality 82 out.j
 
 - No frameworks/build tools — keep it copy-paste editable for co-organizers.
 - Don't break dark mode (`prefers-color-scheme`) or reduced-motion support when adding animations.
-- Price is NOT announced yet — no fixed price on the site until costs are estimated (Corentin = treasurer).
+- Price IS announced (since 27-07-2026): 3 tiers — solidaire 45€ / petit·e sauvage 55€ / baron·ne 65€+ (`#prix` section, based on cost sheet `~/Documents/LPS/festival/3-Achats&Besoins.xlsx`: total 2270€ / 50 pers ≈ 45.4€). Don't change tier amounts without Corentin (treasurer).
+- Payment: Revolut QR (`assets/revolut.jpg`) + `@corentinbel` + IBAN in `#prix` — wire message must be prénom+nom (that's how payments are matched to form entries).
 
 ## Verify after changes
 
