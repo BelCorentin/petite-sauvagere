@@ -2,7 +2,7 @@
 
 Site statique du festival (5–6 septembre 2026, Bretagne). Une page en français : infos lieu/accès/esprit/bouffe + formulaire RSVP minimaliste.
 
-**Live** : https://zingy-eclair-56adf4.netlify.app — deploy auto à chaque push sur `master`. Réponses au formulaire : dashboard Netlify → Forms → `rsvp`.
+**Live** : https://la-petite-sauvagere-festival.netlify.app — deploy auto à chaque push sur `master`. Réponses au formulaire : dashboard Netlify → Forms → `rsvp`.
 
 ## Stack
 
@@ -32,7 +32,7 @@ Ou : connecter le repo GitHub dans le dashboard Netlify (deploy auto à chaque p
 
 Trois options, de la plus simple à la plus scriptable :
 
-1. **Dashboard Netlify** → site `zingy-eclair-56adf4` → *Forms* → `rsvp` → bouton **Export CSV**. C'est la source de vérité (inclut qui a choisi quel palier → à croiser avec les virements reçus pour les relances).
+1. **Dashboard Netlify** → site `la-petite-sauvagere-festival` → *Forms* → `rsvp` → bouton **Export CSV**. C'est la source de vérité (inclut qui a choisi quel palier → à croiser avec les virements reçus pour les relances).
 2. **Inviter Lucas** comme collaborateur : dashboard Netlify → *Team* → *Members* → invite par email (gratuit en rôle Collaborator). Il voit les réponses sans passer par Corentin.
 3. **CLI** (export scriptable) :
    ```bash

@@ -1,6 +1,6 @@
 # CLAUDE.md — site festival Sauvage (La Petite Sauvagère)
 
-Static one-pager, French, no build step, no dependencies. Deployed on Netlify — **every push to `master` auto-deploys** to https://zingy-eclair-56adf4.netlify.app.
+Static one-pager, French, no build step, no dependencies. Deployed on Netlify — **every push to `master` auto-deploys** to https://la-petite-sauvagere-festival.netlify.app.
 
 Project context (roles, budget, decisions, log): Obsidian note `999. 🌳 LIFE/06 Personal Projects/Petite Sauvagère - Festival.md`. Keep its `## Log` updated (dated bullet) after any notable site change.
 
