@@ -16,6 +16,12 @@
   <!-- lucioles (générées en JS) -->
   <div id="fireflies" aria-hidden="true"></div>
 
+  <!-- raccourci covoit' pour celles et ceux qui ont déjà répondu -->
+  <div id="covoit-banner" hidden>
+    <a href="https://docs.google.com/spreadsheets/d/1RsasCiaIVmdYNcUNHBc2RCOOAZ8SqdUrc99Dtx_ojGM/edit" target="_blank" rel="noopener">🚗🚂 Déjà inscrit·e&nbsp;? → la feuille covoit' &amp; trains</a>
+    <button type="button" id="covoit-close" aria-label="Fermer ce raccourci">✕</button>
+  </div>
+
   <!-- ============ HERO ============ -->
   <header class="hero">
     <div class="hero-trees" aria-hidden="true">
@@ -58,7 +64,14 @@
         <figure class="photo"><img src="assets/foret.jpg" alt="Chemin entre les fougères dans la forêt" loading="lazy"><figcaption>La forêt (vraie) 🌿</figcaption></figure>
         <figure class="photo"><img src="assets/grange.jpg" alt="La grande grange ouverte en pierre" loading="lazy"><figcaption>La grange — future scène ? 🎶</figcaption></figure>
         <figure class="photo"><img src="assets/campement.jpg" alt="La yourte au milieu des arbres" loading="lazy"><figcaption>Le coin campement (avec yourte !) ⛺</figcaption></figure>
-        <figure class="photo placeholder"><span>🐒 les orgas<br><small>(photo à venir)</small></span></figure>
+        <figure class="photo orgas">
+          <div class="orga-faces">
+            <img src="assets/orga1.jpg" alt="Un des orgas, casque de kayak et glace à la main au coucher du soleil" loading="lazy">
+            <img src="assets/orga2.jpg" alt="Une des orgas, grimace enthousiaste dans la neige" loading="lazy">
+            <img src="assets/orga3.jpg" alt="Un des orgas, en très très gros plan" loading="lazy">
+          </div>
+          <figcaption>Les orgas 🐒 (représentatif de l'ambiance)</figcaption>
+        </figure>
       </div>
     </section>
 

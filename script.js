@@ -25,6 +25,23 @@ if (!reducedMotion) {
   }
 }
 
+// ---------- Bandeau covoit' ----------
+// Raccourci vers la feuille covoit'/trains pour celles et ceux qui ont
+// déjà répondu au formulaire. Fermable, et ça reste fermé (localStorage).
+const covoitBanner = document.getElementById("covoit-banner");
+if (covoitBanner) {
+  const DISMISS_KEY = "covoit-banner-dismissed";
+  let dismissed = false;
+  try {
+    dismissed = localStorage.getItem(DISMISS_KEY) === "1";
+  } catch (e) { /* navigation privée : on affiche, tant pis */ }
+  if (!dismissed) covoitBanner.hidden = false;
+  document.getElementById("covoit-close").addEventListener("click", () => {
+    covoitBanner.hidden = true;
+    try { localStorage.setItem(DISMISS_KEY, "1"); } catch (e) {}
+  });
+}
+
 // ---------- Renard curieux ----------
 // Pointe le bout de son nez quand on approche du formulaire,
 // et change de tête une fois le formulaire rempli.
