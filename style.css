@@ -261,6 +261,9 @@ h1, h2, .hero-kicker, .hero-theme, .card h3 {
   color: var(--accent);
   margin-bottom: 0.8rem;
 }
+.covoit-box .steps { margin-top: 1rem; }
+.covoit-box .btn { margin-top: 1rem; }
+
 .pay-box ol.steps { counter-reset: step; }
 .pay-box ol.steps li { background: var(--bg); display: flex; gap: 0.7rem; align-items: baseline; }
 .pay-box ol.steps li::before {
