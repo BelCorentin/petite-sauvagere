@@ -47,6 +47,10 @@ Suivi paiements : croiser l'export CSV (colonne `participation`) avec les vireme
 
 `assets/qr-site.png` pointe vers l'URL live — à coller dans WhatsApp / imprimer pour partager le site.
 
+## Programme & inscriptions cuisine
+
+`/programme` redirige (voir `_redirects`) vers une page interactive (Claude Artifact) avec le planning complet et les inscriptions en direct aux créneaux cuisine/vaisselle. Bandeau dismissible sur le site (mêmes pattern/CSS/JS que le bandeau covoit'). L'artefact est privé par défaut côté Claude — vérifier qu'il est bien partagé (menu de partage de la page) pour que le lien fonctionne pour les invité·es.
+
 ## TODO
 
 - [ ] Photo des orgas (dernier placeholder de la grille)
