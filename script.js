@@ -42,6 +42,23 @@ if (covoitBanner) {
   });
 }
 
+// ---------- Bandeau programme ----------
+// Raccourci vers le programme complet + inscriptions cuisine/vaisselle
+// (page interactive). Fermable, et ça reste fermé (localStorage).
+const programmeBanner = document.getElementById("programme-banner");
+if (programmeBanner) {
+  const DISMISS_KEY = "programme-banner-dismissed";
+  let dismissed = false;
+  try {
+    dismissed = localStorage.getItem(DISMISS_KEY) === "1";
+  } catch (e) { /* navigation privée : on affiche, tant pis */ }
+  if (!dismissed) programmeBanner.hidden = false;
+  document.getElementById("programme-close").addEventListener("click", () => {
+    programmeBanner.hidden = true;
+    try { localStorage.setItem(DISMISS_KEY, "1"); } catch (e) {}
+  });
+}
+
 // ---------- Renard curieux ----------
 // Pointe le bout de son nez quand on approche du formulaire,
 // et change de tête une fois le formulaire rempli.
