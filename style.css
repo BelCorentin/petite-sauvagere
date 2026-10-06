@@ -516,6 +516,27 @@ h1, h2, .hero-kicker, .hero-theme, .card h3 {
   opacity: 0.9;
 }
 
+/* ---------------- mode "après festival" (body.post-festival) ----------------
+   Masque inscription, paiement et bandeaux pratiques. Le <form> reste dans le
+   HTML pour que Netlify garde la détection du formulaire "rsvp".
+   Pour revenir en mode inscription : retirer class="post-festival" du <body>. */
+
+#post-fest-banner, .post-fest-only { display: none; }
+.post-festival #post-fest-banner {
+  display: block;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+}
+.post-festival .post-fest-only { display: inline-block; }
+.post-festival .pre-fest-only,
+.post-festival #covoit-banner,
+.post-festival #programme-banner,
+.post-festival #form,
+.post-festival .pay-box { display: none !important; }
+
 /* ---------------- accessibilité ---------------- */
 
 @media (prefers-reduced-motion: reduce) {

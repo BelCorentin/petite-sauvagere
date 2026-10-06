@@ -4,6 +4,10 @@ Static one-pager, French, no build step, no dependencies. Deployed on Netlify �
 
 Project context (roles, budget, decisions, log): Obsidian note `999. 🌳 LIFE/06 Personal Projects/Petite Sauvagère - Festival.md`. Keep its `## Log` updated (dated bullet) after any notable site change.
 
+## Post-festival mode (since 2026-10-06)
+
+`<body class="post-festival">` shows a thank-you banner + hero button and hides the RSVP form, the payment box (IBAN/QR), and the covoit'/programme banners (CSS block at end of `style.css`). The `<form name="rsvp">` stays in the HTML so Netlify keeps detecting it. **To reopen registrations (next edition): remove `class="post-festival"` from `<body>`** — or `git revert` the commit that added it.
+
 ## Files
 
 - `index.html` — everything content: hero, sections (`#esprit`, `#lieu`, `#venir`, `#bouffe`, `#prevoir`, `#form`), footer

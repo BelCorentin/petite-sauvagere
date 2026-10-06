@@ -11,10 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- Mode "après festival" : retirer class="post-festival" ci-dessous pour revenir au site d'inscription (form, paiement, bandeaux). -->
+<body class="post-festival">
 
   <!-- lucioles (générées en JS) -->
   <div id="fireflies" aria-hidden="true"></div>
+
+  <!-- bandeau après festival (visible seulement avec body.post-festival) -->
+  <div id="post-fest-banner">🌲 Sauvage 2026, c'était les 5 &amp; 6 septembre — <strong>merci à toutes et tous d'être venu·es&nbsp;!</strong> 💚</div>
 
   <!-- raccourci covoit' pour celles et ceux qui ont déjà répondu -->
   <div id="covoit-banner" hidden>
@@ -41,7 +45,8 @@
       <span class="hero-dates">samedi 5 &amp; dimanche 6 septembre 2026</span>
     </p>
     <p class="hero-theme">« Sauvage » : chacun·e y met ce qu'iel veut.<br>Une façon d'exprimer sa liberté.</p>
-    <a class="btn btn-hero" href="#form">Je réponds à l'appel de la forêt&nbsp;→</a>
+    <a class="btn btn-hero pre-fest-only" href="#form">Je réponds à l'appel de la forêt&nbsp;→</a>
+    <a class="btn btn-hero post-fest-only" href="#esprit">Merci pour ce week-end sauvage&nbsp;🦊</a>
     <div class="hero-wave" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z"/></svg>
     </div>
